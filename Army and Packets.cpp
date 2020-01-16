@@ -84,7 +84,7 @@ int32_t main(){
         }
         dst(v);
         int m; cin>>m;
-        vector<int>res(m,0);
+        vector<int>res(m,-1);
         int i=0;
         while(i<n){
             ast(res);
