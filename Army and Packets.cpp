@@ -1,4 +1,5 @@
 ///**Bismillahir Rahmanir Rahim.**
+//Distribute some values in such a way that the maximum value become minimum
 #include <bits/stdc++.h>
 #define int                   long long int
 #define clr(a, v)             memset(a,v,sizeof a)
