@@ -14,17 +14,17 @@ int main(){
 	ll res[N];
 	string a, b; cin>>a>>b;
 	reverse(all(a)); reverse(all(b));
-	ll sz_a = a.size(), sz_b = b.size();
-	ll sz = min(sz_a, sz_b), carry = 0, idx = 0;
+	ll alen=a.size(), blen=b.size();
+	ll sz=min(alen,blen), carry=0, idx=0;
 	for(ll i=0; i<sz; i++){
-		ll curr = (a[i]-'0')+(b[i]-'0');
-		res[idx++] = (curr+carry)%10;
-		carry = (curr+carry)/10;
+		ll curr=(a[i]-'0')+(b[i]-'0');
+		res[idx++]=(curr+carry)%10;
+		carry=(curr+carry)/10;
 	}
-	if(sz_a<sz_b){
-		a=b; sz_a = sz_b;
+	if(alen<blen){
+		a=b; alen=blen;
 	}
-	for(ll i=sz; i<sz_a; i++){
+	for(ll i=sz; i<alen; i++){
 		res[idx++]=((a[i]-'0')+carry)%10;
 		carry=((a[i]-'0')+carry)/10;
 	}
